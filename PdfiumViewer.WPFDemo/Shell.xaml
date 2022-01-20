@@ -1,0 +1,20 @@
+﻿<Window
+    x:Class="PdfiumViewer.WPFDemo.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:pdfviewer="clr-namespace:PdfiumViewer;assembly=PdfiumViewer"
+    Title="Shell"
+    WindowState="Maximized">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button Click="LoadPDFButton_Click" Content="Load PDF" />
+        <WindowsFormsHost Grid.Row="1">
+            <pdfviewer:PdfViewer x:Name="pdfviewer" />
+        </WindowsFormsHost>
+    </Grid>
+</Window>
